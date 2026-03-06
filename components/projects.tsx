@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { X } from 'lucide-react'
+import { useState } from "react";
+import { X } from "lucide-react";
 
 export function Projects() {
-  const [selectedProject, setSelectedProject] = useState<string | null>(null)
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   // Original mobile projects
   const mobileProjects = [
@@ -20,7 +20,8 @@ export function Projects() {
     {
       id: "versequest",
       title: "VerseQuest",
-      description: "Mobile turn-based quiz game for learning and memorizing Bible verses. Engaging gameplay with difficulty levels and leaderboards.",
+      description:
+        "Mobile turn-based quiz game for learning and memorizing Bible verses. Engaging gameplay with difficulty levels and leaderboards.",
       tags: ["React Native", "Gaming", "Bible Learning"],
       links: { demo: "#", code: "#" },
       images: ["#", "#", "#", "#"],
@@ -28,7 +29,8 @@ export function Projects() {
     {
       id: "mammynest",
       title: "Mommy's Nest",
-      description: "Comprehensive companion app for mothers from pregnancy to birth. Tracking, tips, community support, and health monitoring in one place.",
+      description:
+        "Comprehensive companion app for mothers from pregnancy to birth. Tracking, tips, community support, and health monitoring in one place.",
       tags: ["React Native", "Health", "Parenting"],
       links: { demo: "#", code: "#" },
       images: ["#", "#", "#"],
@@ -78,7 +80,7 @@ export function Projects() {
       links: { demo: "#", code: "#" },
       images: ["#", "#", "#", "#"],
     },
-  ]
+  ];
 
   // Web development projects
   const webProjects = [
@@ -103,7 +105,8 @@ export function Projects() {
     {
       id: "rizzme",
       title: "RizzMe",
-      description: "A sleek pickup line generator with smooth animations and creative vibes.",
+      description:
+        "A sleek pickup line generator with smooth animations and creative vibes.",
       tags: ["React", "TypeScript", "Framer Motion"],
       links: { demo: "#", code: "#" },
       images: ["#", "#", "#"],
@@ -111,7 +114,8 @@ export function Projects() {
     {
       id: "markdart",
       title: "MarkDart",
-      description: "Sleek web-based Markdown editor with live preview and dark mode.",
+      description:
+        "Sleek web-based Markdown editor with live preview and dark mode.",
       tags: ["React", "Next.js", "TypeScript"],
       links: { demo: "#", code: "#" },
       images: ["#", "#", "#"],
@@ -119,7 +123,8 @@ export function Projects() {
     {
       id: "biblequiz",
       title: "Bible Quiz Adventure",
-      description: "Interactive Bible quiz game to test your knowledge of God's Word.",
+      description:
+        "Interactive Bible quiz game to test your knowledge of God's Word.",
       tags: ["React", "TypeScript", "Local Storage"],
       links: { demo: "#", code: "#" },
       images: ["#", "#", "#"],
@@ -127,7 +132,8 @@ export function Projects() {
     {
       id: "bibleext",
       title: "Bible Verse Extension",
-      description: "Chrome extension that replaces new tabs with inspiring daily Bible verses.",
+      description:
+        "Chrome extension that replaces new tabs with inspiring daily Bible verses.",
       tags: ["JavaScript", "Chrome Extension API", "HTML5"],
       links: { code: "#" },
       images: ["#", "#"],
@@ -135,12 +141,13 @@ export function Projects() {
     {
       id: "learnspanish",
       title: "Learn Spanish",
-      description: "Simple Spanish learning app with text-to-speech using Web Speech API.",
+      description:
+        "Simple Spanish learning app with text-to-speech using Web Speech API.",
       tags: ["Vue.js 3", "Composition API", "Tailwind CSS"],
       links: { demo: "#", code: "#" },
       images: ["#", "#", "#"],
     },
-  ]
+  ];
 
   // Machine Learning & AI projects
   const mlProjects = [
@@ -149,8 +156,20 @@ export function Projects() {
       title: "Neonatal Jaundice Prediction",
       description:
         "Machine learning model deployed as a web app for early jaundice diagnosis in newborns. Built with Python, scikit-learn, and Pandas, hosted on Netlify for clinical accessibility with 96%+ accuracy.",
-      tags: ["Python", "scikit-learn", "Pandas", "NumPy", "React", "TypeScript", "Node.js", "MySQL"],
-      links: { demo: "https://lumicare-ai.netlify.app/", code: "https://github.com/tejHacks/neonatal-jaundice-prediction" },
+      tags: [
+        "Python",
+        "scikit-learn",
+        "Pandas",
+        "NumPy",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "MySQL",
+      ],
+      links: {
+        demo: "https://lumicare-ai.netlify.app/",
+        code: "https://github.com/tejHacks/neonatal-jaundice-prediction",
+      },
       images: ["#", "#", "#", "#"],
     },
     {
@@ -167,28 +186,43 @@ export function Projects() {
       title: "Speaker Diarization System",
       description:
         "Streamlit-based audio processing system to identify and separate different speakers in conversations. Combines PyTorch, librosa, and audio signal processing for speaker identification.",
-      tags: ["Python", "PyTorch", "Streamlit", "librosa", "PyAnnote", "Pydub", "scipy", "sklearn"],
+      tags: [
+        "Python",
+        "PyTorch",
+        "Streamlit",
+        "librosa",
+        "PyAnnote",
+        "Pydub",
+        "scipy",
+        "sklearn",
+      ],
       links: { code: "https://github.com/tejHacks/speaker-diarization" },
       images: ["#", "#", "#"],
     },
-  ]
-  
+  ];
+
   // automatically assign two placeholder images per project based on id
-  ;[mobileProjects, webProjects, mlProjects].forEach((group) => {
+  [mobileProjects, webProjects, mlProjects].forEach((group) => {
     group.forEach((p) => {
       // ensure exactly two images; files were copied into /public/projects
       p.images = [`/projects/${p.id}-1.jpg`, `/projects/${p.id}-2.jpg`];
     });
   });
 
-  const ProjectModal = ({ project }: { project: (typeof mobileProjects)[0] }) => {
+  const ProjectModal = ({
+    project,
+  }: {
+    project: (typeof mobileProjects)[0];
+  }) => {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
         <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-card border border-border p-6">
           <div className="flex items-start justify-between gap-4 mb-4">
             <div>
               <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-              <p className="text-muted-foreground mb-4">{project.description}</p>
+              <p className="text-muted-foreground mb-4">
+                {project.description}
+              </p>
             </div>
             <button
               onClick={() => setSelectedProject(null)}
@@ -201,8 +235,15 @@ export function Projects() {
           <div className="mb-6 space-y-4">
             <div className="grid grid-cols-2 gap-4">
               {project.images.map((img, idx) => (
-                <div key={idx} className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                  <img src={img} alt={`${project.title} screenshot ${idx + 1}`} className="w-full h-full object-cover rounded-lg" />
+                <div
+                  key={idx}
+                  className="aspect-video bg-muted rounded-lg flex items-center justify-center"
+                >
+                  <img
+                    src={img}
+                    alt={`${project.title} screenshot ${idx + 1}`}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
               ))}
             </div>
@@ -212,7 +253,10 @@ export function Projects() {
             <h3 className="font-semibold mb-3">Stack</h3>
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                <span
+                  key={tag}
+                  className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                >
                   {tag}
                 </span>
               ))}
@@ -221,40 +265,64 @@ export function Projects() {
 
           <div className="flex gap-3">
             {project.links.demo && (
-              <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-primary text-primary-foreground py-2 text-center hover:opacity-90 transition-opacity">
+              <a
+                href={project.links.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 rounded-lg bg-primary text-primary-foreground py-2 text-center hover:opacity-90 transition-opacity"
+              >
                 Live Demo
               </a>
             )}
             {project.links.code && (
-              <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg border border-primary text-primary py-2 text-center hover:bg-primary/10 transition-colors">
+              <a
+                href={project.links.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 rounded-lg border border-primary text-primary py-2 text-center hover:bg-primary/10 transition-colors"
+              >
                 View Code
               </a>
             )}
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
-  const ProjectCard = ({ project }: { project: (typeof mobileProjects)[0] }) => (
+  const ProjectCard = ({
+    project,
+  }: {
+    project: (typeof mobileProjects)[0];
+  }) => (
     <button
       onClick={() => setSelectedProject(project.id)}
       className="group rounded-lg border border-border bg-card p-6 text-left transition-all hover:border-primary hover:shadow-lg hover:shadow-primary/10"
     >
-      <h3 className="mb-2 text-xl font-semibold group-hover:text-primary">{project.title}</h3>
-      <p className="mb-4 text-sm text-muted-foreground">{project.description}</p>
+      <h3 className="mb-2 text-xl font-semibold group-hover:text-primary">
+        {project.title}
+      </h3>
+      <p className="mb-4 text-sm text-muted-foreground">
+        {project.description}
+      </p>
       <div className="flex flex-wrap gap-2">
         {project.tags.map((tag) => (
-          <span key={tag} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+          <span
+            key={tag}
+            className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+          >
             {tag}
           </span>
         ))}
       </div>
     </button>
-  )
+  );
 
   return (
-    <section id="projects" className="border-t border-border px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="projects"
+      className="border-t border-border px-4 py-20 sm:px-6 lg:px-8"
+    >
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-12 text-3xl font-bold">Featured Projects</h2>
 
@@ -299,5 +367,5 @@ export function Projects() {
         />
       )}
     </section>
-  )
+  );
 }
