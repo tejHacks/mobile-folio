@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Mobile Developer | React Native & Linux",
   description:
     "Mobile developer with 3+ years experience. React Native specialist, Linux enthusiast, technical writer.",
-  generator: "v0.app",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
