@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 
 export function Projects() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [fullscreenSrc, setFullscreenSrc] = useState<string | null>(null);
 
   // Original mobile projects
   const mobileProjects = [
@@ -201,11 +202,11 @@ export function Projects() {
     },
   ];
 
-  // automatically assign two placeholder images per project based on id
+  // automatically assign four placeholder images per project based on id
   [mobileProjects, webProjects, mlProjects].forEach((group) => {
     group.forEach((p) => {
-      // ensure exactly two images; files were copied into /public/projects
-      p.images = [`/projects/${p.id}-1.jpg`, `/projects/${p.id}-2.jpg`];
+      // ensure up to 4 images; additional files were copied into /public/projects
+      p.images = [1, 2, 3, 4].map((i) => `/projects/${p.id}-${i}.jpg`);
     });
   });
 
@@ -240,9 +241,10 @@ export function Projects() {
                   className="aspect-video bg-muted rounded-lg flex items-center justify-center"
                 >
                   <img
+                    onClick={() => setFullscreenSrc(img)}
                     src={img}
                     alt={`${project.title} screenshot ${idx + 1}`}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg cursor-pointer"
                   />
                 </div>
               ))}
@@ -365,6 +367,20 @@ export function Projects() {
             mlProjects.find((p) => p.id === selectedProject)!
           }
         />
+      )}
+
+      {/* fullscreen overlay */}
+      {fullscreenSrc && (
+        <div
+          className="fixed inset-0 z-60 flex items-center justify-center bg-black/90"
+          onClick={() => setFullscreenSrc(null)}
+        >
+          <img
+            src={fullscreenSrc}
+            alt="Screenshot fullscreen"
+            className="max-w-full max-h-full"
+          />
+        </div>
       )}
     </section>
   );
