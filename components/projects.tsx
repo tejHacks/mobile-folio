@@ -136,6 +136,21 @@ export function Projects() {
       images: ["#", "#", "#", "#"],
     },
     {
+      id: "spanishfirstwords",
+      title: "Spanish First Words",
+      description:
+        "Spanish speaking app to learn your first words in Spanish with audio pronunciation and interactive flashcards.",
+      tags: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Speech Recognition",
+        "Text-to-Speech",
+      ],
+      links: { demo: "#", code: "#", video: "#" },
+      images: ["#", "#", "#", "#"],
+    },
+    {
       id: "revivalshelf",
       title: "RevivalShelf",
       description:
@@ -154,7 +169,7 @@ export function Projects() {
       description:
         "Next-gen platform for mastering C++ with hands-on practice, AI-based mentor, and a fully functional web-based code editor.",
       tags: ["React", "TypeScript", "Framer Motion"],
-      links: { demo: "#", code: "#" },
+      links: { demo: "https://cpp-camp.vercel.app/", code: "#" },
       images: ["#", "#", "#"],
     },
     {
@@ -163,7 +178,7 @@ export function Projects() {
       description:
         "Web app for detecting jaundice in babies using custom Computer Vision model. Built for HelpMum Hackathon with 96%+ accuracy.",
       tags: ["React", "TypeScript", "Node.js", "ML"],
-      links: { demo: "#", code: "#" },
+      links: { demo: "https://lumicare-ai.netlify.app/", code: "#" },
       images: ["#", "#", "#"],
     },
     {
@@ -172,7 +187,7 @@ export function Projects() {
       description:
         "A sleek pickup line generator with smooth animations and creative vibes.",
       tags: ["React", "TypeScript", "Framer Motion"],
-      links: { demo: "#", code: "#" },
+      links: { demo: "https://rizz-generator.vercel.app/", code: "#" },
       images: ["#", "#", "#"],
     },
     {
@@ -181,7 +196,7 @@ export function Projects() {
       description:
         "Sleek web-based Markdown editor with live preview and dark mode.",
       tags: ["React", "Next.js", "TypeScript"],
-      links: { demo: "#", code: "#" },
+      links: { demo: "https://markdart-editor.vercel.app/", code: "#" },
       images: ["#", "#", "#"],
     },
     {
@@ -190,7 +205,10 @@ export function Projects() {
       description:
         "Interactive Bible quiz game to test your knowledge of God's Word.",
       tags: ["React", "TypeScript", "Local Storage"],
-      links: { demo: "#", code: "#" },
+      links: {
+        demo: "https://bible-quiz-game-blombone.netlify.app/",
+        code: "#",
+      },
       images: ["#", "#", "#"],
     },
     {
@@ -199,7 +217,9 @@ export function Projects() {
       description:
         "Chrome extension that replaces new tabs with inspiring daily Bible verses.",
       tags: ["JavaScript", "Chrome Extension API", "HTML5"],
-      links: { code: "#" },
+      links: {
+        code: "https://github.com/tejHacks/random-bible-verse-extension",
+      },
       images: ["#", "#"],
     },
     {
@@ -208,7 +228,7 @@ export function Projects() {
       description:
         "Simple Spanish learning app with text-to-speech using Web Speech API.",
       tags: ["Vue.js 3", "Composition API", "Tailwind CSS"],
-      links: { demo: "#", code: "#" },
+      links: { demo: "https://spanish-words-pi.vercel.app/", code: "#" },
       images: ["#", "#", "#"],
     },
   ];
