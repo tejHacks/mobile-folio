@@ -172,6 +172,14 @@ export function Projects() {
       images: ["#", "#", "#"],
     },
   ]
+  
+  // automatically assign two placeholder images per project based on id
+  ;[mobileProjects, webProjects, mlProjects].forEach((group) => {
+    group.forEach((p) => {
+      // ensure exactly two images; files were copied into /public/projects
+      p.images = [`/projects/${p.id}-1.jpg`, `/projects/${p.id}-2.jpg`];
+    });
+  });
 
   const ProjectModal = ({ project }: { project: (typeof mobileProjects)[0] }) => {
     return (
