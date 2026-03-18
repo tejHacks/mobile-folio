@@ -7,35 +7,43 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [fullscreenSrc, setFullscreenSrc] = useState<string | null>(null);
 
-  // Original mobile projects
   const mobileProjects = [
     {
       id: "kairos",
       title: "Kairos",
       description:
         "A beautiful, intuitive prayer reminder app designed for Christians to stay consistent in daily spiritual practice. Features daily push notifications timed to prayer hours, integrated Bible verses, prayer history tracking, and offline support for reliable use anywhere.",
-      tags: ["React Native", "Expo", "TypeScript", "Firebase", "Redux/Context"],
-      links: { demo: "#", code: "#", video: "#", android: "#", ios: "#" },
-      images: ["#", "#", "#", "#"],
-    },
-    {
-      id: "versequest",
-      title: "VerseQuest",
-      description:
-        "Engaging turn-based mobile quiz game to help users learn and memorize Bible verses. Includes multiple difficulty levels, timed challenges, leaderboards, progress tracking, and rewarding feedback to make Scripture study fun and competitive.",
       tags: [
         "React Native",
         "Expo",
         "TypeScript",
-        "Local Storage/AsyncStorage",
-        "Animations",
+        "SQLITE",
+        "Notifications",
+        "AsyncStorage",
       ],
-      links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
+      links: {
+        demo: "https://github.com/tejHacks/kairos-mobile-app",
+        code: "https://github.com/tejHacks/kairos-mobile-app",
+        video: "#",
+        android: "https://github.com/tejHacks/kairos-mobile-app",
+        ios: "#",
+      },
+      images: [
+        "/projects/kairos-1.png",
+        "/projects/kairos-2.png",
+        "/projects/kairos-3.jpeg",
+        "/projects/kairos-4.jpeg",
+        "/projects/kairos-5.jpeg",
+        "/projects/kairos-6.png",
+        "/projects/kairos-7.png",
+        "/projects/kairos-8.png",
+        "/projects/kairos-9.png",
+        "/projects/kairos-10.png",
+      ],
     },
     {
       id: "churchnotes",
-      title: "Church Notes",
+      title: "Scribe",
       description:
         "Simple, powerful notes app tailored for Christians during church services and Bible study. Capture sermon points, thoughts, prayer requests, and key verses on the fly with fast search, audio recording for quick voice memos, dark mode for low-light settings, and offline-first design.",
       tags: [
@@ -47,23 +55,12 @@ export function Projects() {
         "Notifications",
       ],
       links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
-    },
-    {
-      id: "mommysnest",
-      title: "Mommy's Nest",
-      description:
-        "Comprehensive companion app for mothers, covering pregnancy tracking, weekly tips, fetal development info, BMI calculator, community support features, and health reminders from conception through postpartum.",
-      tags: [
-        "React Native",
-        "Expo",
-        "TypeScript",
-        "Firebase",
-        "Charts",
-        "Notifications",
+      images: [
+        "/projects/scribe-1.png",
+        "/projects/scribe-1.png",
+        "/projects/scribe-1.png",
+        "/projects/scribe-1.png",
       ],
-      links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
     },
     {
       id: "jaundx",
@@ -78,22 +75,12 @@ export function Projects() {
         "Camera API",
       ],
       links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
-    },
-    {
-      id: "breastcare",
-      title: "BreastCare Scanner",
-      description:
-        "Mobile prototype for supporting early awareness of breast cancer through image analysis. Users capture ultrasound/mammogram-like photos or self-exam images; on-device ML model provides preliminary risk indicators, educational resources, and prompts for professional consultation.",
-      tags: [
-        "React Native",
-        "Expo",
-        "TypeScript",
-        "TensorFlow Lite / Keras",
-        "Camera integration",
+      images: [
+        "/projects/jaundx-1.png",
+        "/projects/jaundx-2.png",
+        "/projects/jaundx-3.png",
+        "/projects/jaundx-4.png",
       ],
-      links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
     },
     {
       id: "smoothspeex",
@@ -102,66 +89,39 @@ export function Projects() {
         'Productivity app for recording meetings, interviews, or sermons with automatic speaker diarization and voice separation. Identifies "who spoke when," generates labeled transcripts, highlights key quotes, and supports export for notes/podcasts.',
       tags: ["React Native", "Expo", "TypeScript", "Expo AV", "On-device ML"],
       links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
+      images: [
+        "/projects/smoothspeex-1.png",
+        "/projects/smoothspeex-2.png",
+        "/projects/smoothspeex-3.png",
+        "/projects/smoothspeex-4.png",
+      ],
     },
     {
-      id: "melodyflow",
-      title: "Melody Flow",
+      id: "faithquotes",
+      title: "FaithQuotes",
       description:
-        "Clean, modern offline-first music player for local device libraries. Features playlist creation, queue management, equalizer, waveform visualization, background playback, lock-screen controls, dark mode, and search by artist/album/genre.",
+        "A beautifully crafted devotional quotes app built with an illuminated manuscript aesthetic. Features 100+ curated quotes from Kenneth E. Hagin and other Christian ministers, smooth swipe navigation, a copy-to-clipboard feature, and a warm candlelit UI with ornate gold typography.",
       tags: [
         "React Native",
         "Expo",
         "TypeScript",
-        "Expo AV / Track Player",
-        "Animations",
+        "Expo Font",
+        "React Native SVG",
       ],
-      links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
-    },
-    {
-      id: "nairaflow",
-      title: "NairaFlow",
-      description:
-        "Modern, minimalist redesign concept for a mobile banking super app inspired by top Nigerian fintechs (OPay, Moniepoint, PalmPay, Kuda). Focuses on clean dashboard, quick transfers, bill payments, savings goals, transaction history feed (social-media style), dark mode, and biometric auth flows for seamless, secure everyday banking.",
-      tags: [
-        "React Native",
-        "Expo",
-        "TypeScript",
-        "Tailwind/NativeWind",
-        "Reanimated",
-        "Mock API",
+      links: {
+        demo: "#",
+        code: "https://github.com/tejHacks/christian-quotes-mobile-app",
+        video: "#",
+      },
+      images: [
+        "/projects/faithquotes-1.png",
+        "/projects/faithquotes-2.png",
+        "/projects/faithquotes-3.png",
+        "/projects/faithquotes-4.png",
       ],
-      links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
-    },
-    {
-      id: "spanishfirstwords",
-      title: "Spanish First Words",
-      description:
-        "Spanish speaking app to learn your first words in Spanish with audio pronunciation and interactive flashcards.",
-      tags: [
-        "React Native",
-        "Expo",
-        "TypeScript",
-        "Speech Recognition",
-        "Text-to-Speech",
-      ],
-      links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
-    },
-    {
-      id: "revivalshelf",
-      title: "RevivalShelf",
-      description:
-        "Spiritual books library containing Christian classics and uplifting works for spiritual growth and encouragement.",
-      tags: ["React Native", "Expo", "TypeScript", "SQLite", "UI"],
-      links: { demo: "#", code: "#", video: "#" },
-      images: ["#", "#", "#", "#"],
     },
   ];
 
-  // Web development projects
   const webProjects = [
     {
       id: "cppcamp",
@@ -170,7 +130,11 @@ export function Projects() {
         "Next-gen platform for mastering C++ with hands-on practice, AI-based mentor, and a fully functional web-based code editor.",
       tags: ["React", "TypeScript", "Framer Motion"],
       links: { demo: "https://cpp-camp.vercel.app/", code: "#" },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/cppcamp-1.png",
+        "/projects/cppcamp-2.png",
+        "/projects/cppcamp-3.png",
+      ],
     },
     {
       id: "lumicare",
@@ -179,7 +143,11 @@ export function Projects() {
         "Web app for detecting jaundice in babies using custom Computer Vision model. Built for HelpMum Hackathon with 96%+ accuracy.",
       tags: ["React", "TypeScript", "Node.js", "ML"],
       links: { demo: "https://lumicare-ai.netlify.app/", code: "#" },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/lumicare-1.png",
+        "/projects/lumicare-2.png",
+        "/projects/lumicare-3.png",
+      ],
     },
     {
       id: "rizzme",
@@ -188,7 +156,11 @@ export function Projects() {
         "A sleek pickup line generator with smooth animations and creative vibes.",
       tags: ["React", "TypeScript", "Framer Motion"],
       links: { demo: "https://rizz-generator.vercel.app/", code: "#" },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/rizzme-1.png",
+        "/projects/rizzme-2.png",
+        "/projects/rizzme-3.png",
+      ],
     },
     {
       id: "markdart",
@@ -197,7 +169,11 @@ export function Projects() {
         "Sleek web-based Markdown editor with live preview and dark mode.",
       tags: ["React", "Next.js", "TypeScript"],
       links: { demo: "https://markdart-editor.vercel.app/", code: "#" },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/markdart-1.png",
+        "/projects/markdart-2.png",
+        "/projects/markdart-3.png",
+      ],
     },
     {
       id: "biblequiz",
@@ -209,7 +185,11 @@ export function Projects() {
         demo: "https://bible-quiz-game-blombone.netlify.app/",
         code: "#",
       },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/biblequiz-1.png",
+        "/projects/biblequiz-2.png",
+        "/projects/biblequiz-3.png",
+      ],
     },
     {
       id: "bibleext",
@@ -220,7 +200,7 @@ export function Projects() {
       links: {
         code: "https://github.com/tejHacks/random-bible-verse-extension",
       },
-      images: ["#", "#"],
+      images: ["/projects/bibleext-1.png", "/projects/bibleext-2.png"],
     },
     {
       id: "learnspanish",
@@ -229,11 +209,14 @@ export function Projects() {
         "Simple Spanish learning app with text-to-speech using Web Speech API.",
       tags: ["Vue.js 3", "Composition API", "Tailwind CSS"],
       links: { demo: "https://spanish-words-pi.vercel.app/", code: "#" },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/learnspanish-1.png",
+        "/projects/learnspanish-2.png",
+        "/projects/learnspanish-3.png",
+      ],
     },
   ];
 
-  // Machine Learning & AI projects
   const mlProjects = [
     {
       id: "jaundice",
@@ -254,7 +237,12 @@ export function Projects() {
         demo: "https://lumicare-ai.netlify.app/",
         code: "https://github.com/tejHacks/neonatal-jaundice-prediction",
       },
-      images: ["#", "#", "#", "#"],
+      images: [
+        "/projects/jaundice-1.png",
+        "/projects/jaundice-2.png",
+        "/projects/jaundice-3.png",
+        "/projects/jaundice-4.png",
+      ],
     },
     {
       id: "breastcancer",
@@ -263,7 +251,11 @@ export function Projects() {
         "Deep learning model using ultrasound images for breast cancer detection. Developed for Final Year Research Project using TensorFlow, Keras, and OpenCV with high diagnostic accuracy.",
       tags: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Streamlit"],
       links: { code: "https://github.com/tejHacks/breast-cancer-ultrasound" },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/breastcancer-1.png",
+        "/projects/breastcancer-2.png",
+        "/projects/breastcancer-3.png",
+      ],
     },
     {
       id: "speakerdiarization",
@@ -281,105 +273,109 @@ export function Projects() {
         "sklearn",
       ],
       links: { code: "https://github.com/tejHacks/speaker-diarization" },
-      images: ["#", "#", "#"],
+      images: [
+        "/projects/speakerdiarization-1.png",
+        "/projects/speakerdiarization-2.png",
+        "/projects/speakerdiarization-3.png",
+      ],
     },
   ];
 
-  // automatically assign four placeholder images per project based on id
-  [mobileProjects, webProjects, mlProjects].forEach((group) => {
-    group.forEach((p) => {
-      // ensure up to 4 images; additional files were copied into /public/projects
-      p.images = [1, 2, 3, 4].map((i) => `/projects/${p.id}-${i}.jpg`);
-    });
-  });
+  // ── NO auto-overwrite loop here anymore ──
 
-  const ProjectModal = ({
-    project,
-  }: {
-    project: (typeof mobileProjects)[0];
-  }) => {
-    return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
-        <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-card border border-border p-6">
-          <div className="flex items-start justify-between gap-4 mb-4">
-            <div>
-              <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-              <p className="text-muted-foreground mb-4">
-                {project.description}
-              </p>
-            </div>
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <X size={24} />
-            </button>
-          </div>
-
-          <div className="mb-6 space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              {project.images.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="aspect-video bg-muted rounded-lg flex items-center justify-center"
-                >
-                  <img
-                    onClick={() => setFullscreenSrc(img)}
-                    src={img}
-                    alt={`${project.title} screenshot ${idx + 1}`}
-                    className="w-full h-full object-cover rounded-lg cursor-pointer"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mb-6">
-            <h3 className="font-semibold mb-3">Stack</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex gap-3">
-            {project.links.demo && (
-              <a
-                href={project.links.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 rounded-lg bg-primary text-primary-foreground py-2 text-center hover:opacity-90 transition-opacity"
-              >
-                Live Demo
-              </a>
-            )}
-            {project.links.code && (
-              <a
-                href={project.links.code}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 rounded-lg border border-primary text-primary py-2 text-center hover:bg-primary/10 transition-colors"
-              >
-                View Code
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
-    );
+  type Project = {
+    id: string;
+    title: string;
+    description: string;
+    tags: string[];
+    links: {
+      demo?: string;
+      code?: string;
+      video?: string;
+      android?: string;
+      ios?: string;
+    };
+    images: string[];
   };
 
-  const ProjectCard = ({
-    project,
-  }: {
-    project: (typeof mobileProjects)[0];
-  }) => (
+  const ProjectModal = ({ project }: { project: Project }) => (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+      <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-card border border-border p-6">
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div>
+            <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
+            <p className="text-muted-foreground mb-4">{project.description}</p>
+          </div>
+          <button
+            onClick={() => setSelectedProject(null)}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <X size={24} />
+          </button>
+        </div>
+
+        <div className="mb-6">
+          <div className="grid grid-cols-2 gap-4">
+            {project.images.map((img, idx) => (
+              <div
+                key={idx}
+                className="aspect-video bg-muted rounded-lg overflow-hidden"
+              >
+                <img
+                  onClick={() => setFullscreenSrc(img)}
+                  src={img}
+                  alt={`${project.title} screenshot ${idx + 1}`}
+                  className="w-full h-full object-cover cursor-pointer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="font-semibold mb-3">Stack</h3>
+          <div className="flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex gap-3">
+          {project.links.demo && project.links.demo !== "#" && (
+            <a
+              href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 rounded-lg bg-primary text-primary-foreground py-2 text-center hover:opacity-90 transition-opacity"
+            >
+              Live Demo
+            </a>
+          )}
+          {project.links.code && project.links.code !== "#" && (
+            <a
+              href={project.links.code}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 rounded-lg border border-primary text-primary py-2 text-center hover:bg-primary/10 transition-colors"
+            >
+              View Code
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
+  const ProjectCard = ({ project }: { project: Project }) => (
     <button
       onClick={() => setSelectedProject(project.id)}
       className="group rounded-lg border border-border bg-card p-6 text-left transition-all hover:border-primary hover:shadow-lg hover:shadow-primary/10"
@@ -403,6 +399,12 @@ export function Projects() {
     </button>
   );
 
+  const allProjects: Project[] = [
+    ...mobileProjects,
+    ...webProjects,
+    ...mlProjects,
+  ];
+
   return (
     <section
       id="projects"
@@ -411,7 +413,6 @@ export function Projects() {
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-12 text-3xl font-bold">Featured Projects</h2>
 
-        {/* Mobile Projects */}
         <div className="mb-16">
           <h3 className="mb-6 text-2xl font-semibold">Mobile Applications</h3>
           <div className="grid gap-6 md:grid-cols-2">
@@ -421,7 +422,6 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Web Development Projects */}
         <div className="mb-16">
           <h3 className="mb-6 text-2xl font-semibold">Web Development</h3>
           <div className="grid gap-6 md:grid-cols-2">
@@ -431,7 +431,6 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Machine Learning & AI Projects */}
         <div>
           <h3 className="mb-6 text-2xl font-semibold">Machine Learning & AI</h3>
           <div className="grid gap-6 md:grid-cols-2">
@@ -444,18 +443,13 @@ export function Projects() {
 
       {selectedProject && (
         <ProjectModal
-          project={
-            mobileProjects.find((p) => p.id === selectedProject) ||
-            webProjects.find((p) => p.id === selectedProject) ||
-            mlProjects.find((p) => p.id === selectedProject)!
-          }
+          project={allProjects.find((p) => p.id === selectedProject)!}
         />
       )}
 
-      {/* fullscreen overlay */}
       {fullscreenSrc && (
         <div
-          className="fixed inset-0 z-60 flex items-center justify-center bg-black/90"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90"
           onClick={() => setFullscreenSrc(null)}
         >
           <img
